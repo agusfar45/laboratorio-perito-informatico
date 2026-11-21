@@ -1,0 +1,3 @@
+# Evidencia forense: guardar los bytes tal cual (sin convertir fin de línea),
+# para que los SHA-256 del acta coincidan en cualquier sistema operativo.
+* -text
