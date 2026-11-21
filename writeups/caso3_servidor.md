@@ -12,10 +12,11 @@ y se deja escrito. Abajo: hora del log y, entre paréntesis, UTC-3 asumiendo ser
 ## 3.1 Script
 
 ```bash
-python auth_log.py auth.log
+python auth_log.py auth.log --html informe_auth.html
 ```
 
-→ [salida_auth_log.txt](../resultados/caso3_servidor/salida_auth_log.txt)
+→ [salida_auth_log.txt](../resultados/caso3_servidor/salida_auth_log.txt) ·
+[informe_auth.html](../resultados/caso3_servidor/informe_auth.html) (línea de tiempo y comandos sudo marcados)
 
 ## 3.2 Comandos de Linux
 

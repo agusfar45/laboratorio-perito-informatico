@@ -61,6 +61,14 @@ script cortó a 64 KB. `003_vista_parcial.png` es una **visualización** generad
 
 El carving no recupera **nombres ni fechas**: esos datos viven en el sistema de archivos, que no se conserva.
 
+## Extensión: ZIP / DOCX / XLSX
+
+`carving.py` también recupera ZIP y documentos de Office (que son ZIP por dentro). En este pendrive
+no había ninguno; lo probé con una [imagen sintética](../scripts/pruebas/crear_imagen_zip.py) →
+[salida](../resultados/desafios/salida_carving_zip.txt). Detalle a explicar: un DOCX tiene un
+`PK\x03\x04` **por cada archivo interno**, así que después de recuperar uno completo hay que saltarlo
+entero para no sacar sus partes como archivos sueltos.
+
 ## Pendiente
 
 - Comparar con `foremost`, `binwalk` y The Sleuth Kit (`mmls`, `fls`) en Linux.

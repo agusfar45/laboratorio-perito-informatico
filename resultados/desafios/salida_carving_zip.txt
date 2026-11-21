@@ -1,0 +1,7 @@
+Imagen: prueba_zip.dd (36,511 bytes)
+
+001_off00001000.docx             426 B  completo                 sha256=85a0bcae784523cf…  [CRC OK, 3 archivos internos]
+002_off000031AA.xlsx             317 B  completo                 sha256=45a1637c3c4bcd0c…  [CRC OK, 2 archivos internos]
+003_off000042E7.zip           19,384 B  INCOMPLETO (sin footer)  sha256=a13b803a668f1005…  [no abre: File is not a zip file]
+
+3 archivo(s) recuperado(s) en rec_zip/

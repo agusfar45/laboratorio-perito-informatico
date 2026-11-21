@@ -39,12 +39,12 @@ ENUNCIADO.md      Consigna original del laboratorio
 
 | Script | Qué hace |
 |---|---|
-| `hash_lote.py` | Calcula y verifica SHA-256/MD5 contra un manifiesto (compatible con `sha256sum -c`) |
+| `hash_lote.py` | Calcula y verifica SHA-256/MD5 contra un manifiesto (compatible con `sha256sum -c` y `md5sum -c`) |
 | `whatsapp_parser.py` | Extrae chats de `msgstore.db` + contactos de `wa.db` → CSV + informe HTML, abriendo la base en solo lectura |
 | `sqlite_borrados.py` | Busca texto de registros eliminados en el archivo SQLite crudo |
 | `exif_gps.py` | Extrae equipo, fechas y GPS de fotos JPEG |
-| `carving.py` | File carving por firmas (JPEG, PNG, PDF) sobre imágenes crudas |
-| `auth_log.py` | Detecta fuerza bruta, accesos tras fallos y comandos sudo en `auth.log` |
+| `carving.py` | File carving por firmas (JPEG, PNG, PDF, ZIP/DOCX/XLSX/PPTX) sobre imágenes crudas |
+| `auth_log.py` | Detecta fuerza bruta, accesos tras fallos y comandos sudo en `auth.log`; genera informe HTML |
 | `linea_tiempo.py` | Une mensajes, fotos y eventos manuales en una línea de tiempo UTC-3, marcando discrepancias |
 
 Uso rápido (Python 3.8+, `pip install pillow`):
@@ -55,8 +55,19 @@ python hash_lote.py ../evidencia/caso1_celular_android --verificar ../evidencia/
 python whatsapp_parser.py --msgstore ../evidencia/caso1_celular_android/data/data/com.whatsapp/databases/msgstore.db \
                           --wa ../evidencia/caso1_celular_android/data/data/com.whatsapp/databases/wa.db -o salida_wa
 python carving.py ../evidencia/caso2_pendrive.dd -o recuperados
-python auth_log.py ../evidencia/caso3_servidor/auth.log
+python auth_log.py ../evidencia/caso3_servidor/auth.log --html informe_auth.html
 ```
+
+## Desafíos de Python
+
+Mejoras propuestas por la consigna, implementadas y probadas:
+
+| Desafío | Qué hice | Cómo lo verifiqué |
+|---|---|---|
+| MD5 en `hash_lote.py` | `--md5` genera un segundo manifiesto en formato `md5sum`. Al verificar, detecta el algoritmo por el largo del hash (32/40/64), así acepta actas MD5, SHA-1, SHA-256 o mezcladas | El manifiesto MD5 pasa con `md5sum -c`. **Bug encontrado:** en Windows los manifiestos salían con CRLF y `sha256sum -c` de Linux no los leía; ahora se escriben siempre en LF |
+| Informe HTML de `auth_log.py` | `--html`: resumen, alerta de intrusión, fallos por IP con barras, accesos, comandos sudo con lo que puede indicar cada uno y línea de tiempo → [informe_auth.html](resultados/caso3_servidor/informe_auth.html) | La salida de texto quedó igual que antes. Probé un log con un usuario llamado `<script>…`: todo lo que viene del log se escapa, porque lo controla el atacante |
+| ZIP/DOCX/XLSX en `carving.py` | Header `PK\x03\x04`, fin en el registro EOCD `PK\x05\x06` + 22 bytes + comentario (largo variable). El subtipo sale de las carpetas internas (`word/`, `xl/`, `ppt/`) y se valida el CRC de cada archivo interno | [Imagen de prueba](scripts/pruebas/crear_imagen_zip.py) con un DOCX, un XLSX con comentario y un ZIP truncado: los dos primeros salen **con el mismo SHA-256 que los originales** y el truncado queda marcado como incompleto → [salida](resultados/desafios/salida_carving_zip.txt). El caso 2 da los mismos 5 archivos que antes |
+| `linea_tiempo.py` | Une WhatsApp, fotos y eventos manuales, y marca las fechas contradictorias | [linea_tiempo.csv](resultados/caso1_celular/linea_tiempo.csv) |
 
 ## Principios que apliqué
 
