@@ -1,0 +1,9 @@
+[img_stat] caso2_pendrive.dd: 4,194,304 bytes  (The Sleuth Kit 4.15.0)
+
+[mmls] Tabla de particiones
+  No se reconoce tabla de particiones (Volume_Info_Con: (tsk3.cpp:1004) Error opening Volume_Info: unknown libtsk error)
+
+[fsstat] Sistema de archivos en el byte 0
+  No se reconoce sistema de archivos (FS_Info_Con: (tsk3.cpp:328) Unable to open the image as a filesystem at offset: 0x00000000 with error: Cannot determine file system type)
+
+No hay sistema de archivos que listar: queda el carving (carving.py / PhotoRec / foremost).

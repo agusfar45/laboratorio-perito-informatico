@@ -1,0 +1,15 @@
+[img_stat] fat12.dd: 1,474,560 bytes  (The Sleuth Kit 4.15.0)
+
+[mmls] Tabla de particiones
+  No se reconoce tabla de particiones (Volume_Info_Con: (tsk3.cpp:1004) Error opening Volume_Info: unknown libtsk error)
+
+[fsstat] Sistema de archivos en el byte 0
+  Tipo: FAT12, bloque 512 B, 2880 bloques
+
+[fls -r] Archivos (* = borrado; los $ son entradas virtuales de Sleuth Kit)
+         3          30  /NOTAS.TXT
+  *      4          46  /_UENTAS.TXT  -> "SOL.RIO.CAMPO  LUNA.PIEDRA.MAR  NUBE.TREN.SAL."
+     45779         512  /$MBR
+     45780        4608  /$FAT1
+     45781        4608  /$FAT2
+     45782           0  /$OrphanFiles

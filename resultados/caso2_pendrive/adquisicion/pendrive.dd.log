@@ -1,0 +1,13 @@
+=== Adquisición forense (adquirir.py) ===
+Perito:        (nombre del perito)
+Equipo:        (equipo del perito) · Windows 11 · Python 3.11
+Origen:        ../evidencia/caso2_pendrive.dd  (4,194,304 bytes = 8,192 sectores de 512)
+Destino:       practica_adq/pendrive.dd
+Bloque:        4,194,304 bytes · modo noerror,sync
+Inicio:        2026-11-21T18:34:01-03:00
+Fin:           2026-11-21T18:34:01-03:00  (0.0 s, 233.1 MB/s)
+SHA-256 (adquisición): 63c861e2003ace70fa229ab77c9ce23c38cce93334d8cc6414dcd60ac8fd9d65
+MD5     (adquisición): 46657dba7a7a7a77fe581a34b89adf71
+Sectores ilegibles:    ninguno
+Verificación de la imagen escrita: OK, coincide
+Hash del origen releído:           OK, coincide

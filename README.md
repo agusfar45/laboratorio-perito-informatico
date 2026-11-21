@@ -14,7 +14,7 @@ redactado con la estructura habitual de la justicia argentina.
 |---|---|---|
 | 1 — Celular | ¿A qué cuenta fue el dinero de la estafa? | Recuperé un **mensaje de WhatsApp eliminado** del espacio no asignado de SQLite, lo decodifiqué byte a byte (chat, remitente, hora) y lo crucé con una captura de pantalla |
 | 1 — Celular | ¿La evidencia está íntegra? | 1 de 7 archivos **no coincide con el hash del acta** y tiene la fecha EXIF manipulada |
-| 2 — Pendrive | ¿Qué tenía el pendrive "vacío"? | 5 archivos recuperados por carving, uno **parcialmente sobrescrito**; vinculan el pendrive con el caso 1 |
+| 2 — Pendrive | ¿Qué tenía el pendrive "vacío"? | 5 archivos recuperados por carving, uno **parcialmente sobrescrito**; resultado contrastado con **PhotoRec** y **The Sleuth Kit**; vinculan el pendrive con el caso 1 |
 | 3 — Servidor | ¿Cómo entraron y qué se llevaron? | Fuerza bruta SSH distribuida desde 3 IPs → acceso como `backup` → usuario persistente con sudo → **exfiltración** de `/srv/clientes` por HTTP → borrado de logs |
 
 ## Contenido
@@ -46,6 +46,8 @@ ENUNCIADO.md      Consigna original del laboratorio
 | `carving.py` | File carving por firmas (JPEG, PNG, PDF, ZIP/DOCX/XLSX/PPTX) sobre imágenes crudas |
 | `auth_log.py` | Detecta fuerza bruta, accesos tras fallos y comandos sudo en `auth.log`; genera informe HTML |
 | `linea_tiempo.py` | Une mensajes, fotos y eventos manuales en una línea de tiempo UTC-3, marcando discrepancias |
+| `sleuthkit_info.py` | The Sleuth Kit (pytsk3): particiones, sistema de archivos y listado de archivos **borrados** (`mmls`/`fsstat`/`fls`/`icat`) |
+| `adquirir.py` | Imagen bit a bit con hash durante la copia, log y manejo de sectores ilegibles (`dd conv=noerror,sync` + `dc3dd`) |
 
 Uso rápido (Python 3.8+, `pip install pillow`):
 
@@ -80,6 +82,8 @@ Mejoras propuestas por la consigna, implementadas y probadas:
 
 ## Lo que sigue
 
-- Repetir el caso 2 con Foremost, binwalk y The Sleuth Kit/Autopsy y comparar resultados.
+- ~~Comparar el caso 2 con herramientas profesionales~~ → hecho con **PhotoRec** y **The Sleuth Kit**
+  ([write-up, 2.4](writeups/caso2_pendrive.md#24-comparación-con-herramientas-profesionales)). Falta Foremost/binwalk en Linux.
+- Adquirir un pendrive real con `dc3dd` y bloqueador de escritura (el procedimiento y `adquirir.py` ya están).
 - Analizar extracciones Android reales (de mi propio teléfono) con ALEAPP.
 - Contar intentos SSH por PID de `sshd` en `auth_log.py` para no duplicar los `Invalid user`.

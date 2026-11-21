@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dfxml xmloutputversion='1.0'>
+  <metadata 
+  xmlns='http://www.forensicswiki.org/wiki/Category:Digital_Forensics_XML' 
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xmlns:dc='http://purl.org/dc/elements/1.1/'>
+    <dc:type>Carve Report</dc:type>
+  </metadata>
+  <creator>
+    <package>PhotoRec</package>
+    <version>7.3-WIP</version>
+    <build_environment>
+      <compiler>GCC 13.4, Cygwin 3003.3</compiler>
+      <library name='libext2fs' version='1.45.3'/>
+      <library name='libewf' version='20140608'/>
+      <library name='libjpeg' version='libjpeg-turbo-1.5.3'/>
+      <library name='libntfs' version='available'/>
+      <library name='zlib' version='1.2.11'/>
+    </build_environment>
+    <execution_environment>
+      <os_sysname>Windows</os_sysname>
+      <os_release>Windows 8 (9200)</os_release>
+      <os_version>Windows 8 (9200)</os_version>
+      <host>(equipo del perito)</host>
+      <arch>x86_64</arch>
+      <uid>197611</uid>
+      <start_time>2026-11-21T18:31:17-0300</start_time>
+    </execution_environment>
+  </creator>
+  <source>
+    <image_filename>caso2_pendrive.dd</image_filename>
+    <sectorsize>512</sectorsize>
+    <image_size>4194304</image_size>
+    <volume>
+      <byte_runs>
+        <byte_run offset='0' img_offset='0' len='4194304'/>
+      </byte_runs>
+    </volume>
+  </source>
+  <configuration>
+  </configuration>
+  <fileobject>
+    <filename>f0000128.jpg</filename>
+    <filesize>6910</filesize>
+    <byte_runs>
+      <byte_run offset='0' img_offset='65536' len='32768'/>
+    </byte_runs>
+  </fileobject>
+  <fileobject>
+    <filename>f0001280.png</filename>
+    <filesize>1714</filesize>
+    <byte_runs>
+      <byte_run offset='0' img_offset='655360' len='32768'/>
+    </byte_runs>
+  </fileobject>
+  <fileobject>
+    <filename>f0002688.pdf</filename>
+    <filesize>419</filesize>
+    <byte_runs>
+      <byte_run offset='0' img_offset='1376256' len='32768'/>
+    </byte_runs>
+  </fileobject>
+  <fileobject>
+    <filename>f0004096.jpg</filename>
+    <filesize>15493</filesize>
+    <byte_runs>
+      <byte_run offset='0' img_offset='2097152' len='32768'/>
+    </byte_runs>
+  </fileobject>
+  <fileobject>
+    <filename>b0006144.jpg</filename>
+    <filesize>32768</filesize>
+    <byte_runs>
+      <byte_run offset='0' img_offset='3145728' len='32768'/>
+    </byte_runs>
+  </fileobject>
+</dfxml>

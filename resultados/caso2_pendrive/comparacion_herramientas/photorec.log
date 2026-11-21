@@ -1,0 +1,105 @@
+
+Using locale 'C.UTF-8'.
+
+
+Sat Nov 21 18:30:44 2026
+Command line: PhotoRec /log /d photorec/rec /cmd caso2_pendrive.dd partition_none,fileopt,everything,enable,wholespace,search
+
+PhotoRec 7.3-WIP, Data Recovery Utility, September 2025
+Christophe GRENIER <grenier@cgsecurity.org>
+https://www.cgsecurity.org
+OS: Windows 8 (9200)
+Compiler: GCC 13.4, Cygwin 3003.3
+ext2fs lib: 1.45.3, ntfs lib: available, ewf lib: 20140608, libjpeg: libjpeg-turbo-1.5.3, curses lib: ncurses 6.1
+Hard disk list
+Disk caso2_pendrive.dd - 4194 KB / 4096 KiB - CHS 1 255 63 (RO), sector size=512
+
+Partition table type defaults to None
+Disk caso2_pendrive.dd - 4194 KB / 4096 KiB (RO)
+Partition table type: None
+   P Unknown                  0   0  1     0 130  2       8192
+
+Interface File Select
+789 first-level signatures enabled
+
+Analyse
+   P Unknown                  0   0  1     0 130  2       8192
+Pass 0 (blocksize=512) STATUS_FIND_OFFSET
+blocksize=32768, offset=0
+Elapsed time 0h00m00s
+Pass 1 (blocksize=32768) STATUS_EXT2_OFF
+photorec/rec.1/f0000128.jpg	 128-191
+photorec/rec.1/f0001280.png	 1280-1343
+photorec/rec.1/f0002688.pdf	 2688-2751
+photorec/rec.1/f0004096.jpg	 4096-4159
+Elapsed time 0h00m00s
+Pass 1 +4 files
+jpg: 2/3 recovered
+pdf: 1/1 recovered
+png: 1/1 recovered
+dovecot: 0/67 recovered
+Total: 4 files found
+
+7936 sectors contain unknown data, 68 invalid files found and rejected.
+PhotoRec exited normally.
+
+Using locale 'C.UTF-8'.
+
+
+Sat Nov 21 18:31:17 2026
+Command line: PhotoRec /log /d photorec_kc/rec /cmd caso2_pendrive.dd partition_none,options,keep_corrupted_file,fileopt,everything,enable,wholespace,search
+
+PhotoRec 7.3-WIP, Data Recovery Utility, September 2025
+Christophe GRENIER <grenier@cgsecurity.org>
+https://www.cgsecurity.org
+OS: Windows 8 (9200)
+Compiler: GCC 13.4, Cygwin 3003.3
+ext2fs lib: 1.45.3, ntfs lib: available, ewf lib: 20140608, libjpeg: libjpeg-turbo-1.5.3, curses lib: ncurses 6.1
+Hard disk list
+Disk caso2_pendrive.dd - 4194 KB / 4096 KiB - CHS 1 255 63 (RO), sector size=512
+
+Partition table type defaults to None
+Disk caso2_pendrive.dd - 4194 KB / 4096 KiB (RO)
+Partition table type: None
+   P Unknown                  0   0  1     0 130  2       8192
+New options :
+ Paranoid : Yes
+ Brute force : No
+ Keep corrupted files : Yes
+ ext2/ext3 mode : No
+ Expert mode : No
+ Low memory : No
+
+Interface File Select
+789 first-level signatures enabled
+
+Analyse
+   P Unknown                  0   0  1     0 130  2       8192
+Pass 0 (blocksize=512) STATUS_FIND_OFFSET
+blocksize=32768, offset=0
+Elapsed time 0h00m00s
+Pass 1 (blocksize=32768) STATUS_EXT2_OFF
+photorec_kc/rec.1/f0000128.jpg	 128-191
+photorec_kc/rec.1/f0001280.png	 1280-1343
+photorec_kc/rec.1/f0002688.pdf	 2688-2751
+photorec_kc/rec.1/f0004096.jpg	 4096-4159
+Elapsed time 0h00m00s
+Pass 1 +4 files
+jpg: 2/3 recovered
+pdf: 1/1 recovered
+png: 1/1 recovered
+dovecot: 0/67 recovered
+Total: 4 files found
+
+Pass 2 (blocksize=32768) STATUS_EXT2_OFF_SAVE_EVERYTHING
+photorec_kc/rec.1/b0006144.jpg	 6144-6207
+Elapsed time 0h00m01s
+Pass 2 +1 file
+jpg: 2/2 recovered
+pdf: 1/1 recovered
+png: 1/1 recovered
+dovecot: 0/67 recovered
+Total: 4 files found
+
+7872 sectors contain unknown data, 67 invalid files found but saved.
+PhotoRec exited normally.

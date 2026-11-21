@@ -1,0 +1,14 @@
+=== Adquisición forense (adquirir.py) ===
+Perito:        (nombre del perito)
+Equipo:        (equipo del perito) · Windows 11 · Python 3.11
+Origen:        ../evidencia/caso2_pendrive.dd  (4,194,304 bytes = 8,192 sectores de 512)
+Destino:       practica_adq/pendrive_danado.dd
+Bloque:        4,194,304 bytes · modo noerror,sync
+SIMULACIÓN:    sectores tratados como dañados: 128-130
+Inicio:        2026-11-21T18:34:01-03:00
+Fin:           2026-11-21T18:34:01-03:00  (0.1 s, 64.8 MB/s)
+SHA-256 (adquisición): 406778bcccd925da70b721fa1691f414617400aa723c560c1d5953d6509ae4dd
+MD5     (adquisición): b89df71d060a3fae3eed4ad080542758
+Sectores ilegibles:    3 (128-130), rellenados con ceros
+Verificación de la imagen escrita: OK, coincide
+Nota: el hash corresponde a la IMAGEN, que incluye los ceros de relleno. No es comparable con un hash del dispositivo; se informa junto con la lista de sectores ilegibles.
