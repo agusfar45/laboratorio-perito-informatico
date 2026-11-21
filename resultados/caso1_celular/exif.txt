@@ -1,0 +1,29 @@
+
+IMG_20261101_102233.jpg
+   fabricante           samsung
+   modelo               SM-A546E
+   fecha_modificacion   2026:11:01 10:22:33
+   fecha_original       2026:11:01 10:22:33
+   lat                  -24.7859
+   lon                  -65.4117
+   mapa                 https://maps.google.com/?q=-24.785900,-65.411700
+
+IMG_20261104_130010.jpg
+   fabricante           samsung
+   modelo               SM-A546E
+   fecha_modificacion   2026:11:04 13:00:10
+   fecha_original       2026:11:04 13:00:10
+   (sin GPS)
+
+IMG_20261106_181502.jpg
+   fabricante           samsung
+   modelo               SM-A546E
+   fecha_modificacion   2026:11:05 09:00:00
+   fecha_original       2026:11:05 09:00:00
+   lat                  -24.8994
+   lon                  -65.4859
+   mapa                 https://maps.google.com/?q=-24.899400,-65.485900
+
+Screenshot_20261103_153112_WhatsApp.jpg
+   fecha_original       
+   (sin GPS)

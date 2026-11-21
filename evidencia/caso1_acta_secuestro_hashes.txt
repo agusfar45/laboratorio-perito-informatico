@@ -1,0 +1,9 @@
+# Acta de secuestro - Caso PRACTICA-2026-0147 - SHA-256 calculados en el lugar del hecho
+# Fecha: 07/11/2026 10:40 - Perito interviniente: (practica)
+610f96040606363e63306f78568a978b51908534293d8b06d5f14ea8172af63b  data/data/com.whatsapp/databases/msgstore.db
+8e2152df5278c52be1dbbc6db657cb5601d833f3dda32b4a81614e4a0182cb86  data/data/com.whatsapp/databases/wa.db
+f56bd0fafe2624b222272d89c30c205de37446a4d30d993d7bc60afecdc4922c  sdcard/DCIM/Camera/IMG_20261101_102233.jpg
+dad8e131c8d183dab10c06e96f6f92ba4069b41973cdaeafd952121b2ec3b02b  sdcard/DCIM/Camera/IMG_20261104_130010.jpg
+2cea1522889fea9429c8597b80d9a3c09ae338c8653ae446117f94e2adbc3500  sdcard/DCIM/Camera/IMG_20261106_181502.jpg
+dac8cc31496d73c57c4c032ababd9d4001f0b96b686cf7cfd9b8d7f711dd2f33  sdcard/Pictures/Screenshots/Screenshot_20261103_153112_WhatsApp.jpg
+bcbf0b320906dfddf2288973c0b9b8b5eefc1c007e40c60d4102456b38a38c9f  system/build.prop

@@ -1,0 +1,7 @@
+Base: ..\evidencia\caso1_celular_android\data\data\com.whatsapp\databases\msgstore.db  |  16384 bytes  |  página 4096 B  |  páginas en freelist: 0
+Tablas: jid, chat, message  |  textos vivos: 37
+
+[offset 0x003A28 | página 4] 3EB0DELETED00000001
+[offset 0x003A47 | página 4] Pasale este alias a la mina: SOL.RIO.CAMPO  CVU 0000003100099887766554 titular Rocio BenitezB
+
+2 cadena(s) no presentes en los datos vivos

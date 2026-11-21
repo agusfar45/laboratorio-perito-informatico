@@ -1,0 +1,7 @@
+ro.product.manufacturer=samsung
+ro.product.model=SM-A546E
+ro.product.name=a54xnsxx
+ro.build.version.release=14
+ro.build.version.security_patch=2026-09-01
+ro.serialno=R58TA0FICT1
+persist.sys.timezone=America/Argentina/Salta

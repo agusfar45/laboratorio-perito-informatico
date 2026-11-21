@@ -1,0 +1,4 @@
+fecha_hora_ART,tipo,fuente,detalle,referencia,fiabilidad
+02/11/2026 18:23:00,WhatsApp recibido (BORRADO),msgstore.db (no asignado),"[chat 2] <- Primo Nacho (+5493870002222): Pasale este alias a la mina: SOL.RIO.CAMPO  CVU 0000003100099887766554 titular Rocio Benitez","rowid 16, página 4, offset 0x3A1A",recuperado de registro borrado
+03/11/2026 15:29:00,Transferencia (según comprobante),Screenshot_20261103_153112_WhatsApp.jpg,"$850.000 a SOL.RIO.CAMPO, titular R. Benitez, operación 000147",contenido de la imagen,dato visible en la captura (no verificado con la entidad)
+07/11/2026 10:40:00,Secuestro del equipo,caso1_acta_secuestro_hashes.txt,Acta de secuestro y cálculo de SHA-256 en el lugar del hecho,acta,documental

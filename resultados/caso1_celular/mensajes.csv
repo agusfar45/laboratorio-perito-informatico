@@ -1,0 +1,16 @@
+﻿id,chat,contacto,numero,direccion,fecha_hora_ART,recibido_ART,tipo,texto,key_id
+1,1,Carla Compradora,+5493870001111,RECIBIDO,02/11/2026 18:05:00,02/11/2026 18:05:01,0,"Hola! Vi la publicación de la moto en Marketplace, sigue disponible?",3EB0A47D1EA09AF1002D
+2,1,Carla Compradora,+5493870001111,ENVIADO,02/11/2026 18:09:00,02/11/2026 18:09:02,0,"Hola Carla, sí! Honda Wave 2022, 8.000 km, papeles al día",3EB0F1E19104ED4F60B3
+3,1,Carla Compradora,+5493870001111,ENVIADO,02/11/2026 18:10:00,02/11/2026 18:10:02,0,Te la dejo en $850.000 pero tengo otro interesado que viene mañana,3EB09D1CBA7A7082E30B
+4,1,Carla Compradora,+5493870001111,RECIBIDO,02/11/2026 18:15:00,02/11/2026 18:15:03,0,Me interesa. Puedo ir a verla?,3EB0A04D391F2ECA2190
+5,1,Carla Compradora,+5493870001111,ENVIADO,02/11/2026 18:17:00,02/11/2026 18:17:03,0,Si me señás hoy te la guardo. Pasame el total y el viernes te la entrego en Cerrillos,3EB0CD758B33E2451E9A
+10,2,Primo Nacho,+5493870002222,ENVIADO,02/11/2026 18:20:00,02/11/2026 18:20:01,0,"Primo cayó una, quiere la moto",3EB059027CB9CFF2B6B9
+11,2,Primo Nacho,+5493870002222,RECIBIDO,02/11/2026 18:22:00,02/11/2026 18:22:03,0,"Joya, que transfiera a la cuenta de siempre",3EB0B9DF07DB56958F91
+6,1,Carla Compradora,+5493870001111,RECIBIDO,03/11/2026 15:30:00,03/11/2026 15:30:02,0,"Listo, ahí te transferí los $850.000. Te paso el comprobante",3EB04FDAF70CFE7AC4B1
+7,1,Carla Compradora,+5493870001111,ENVIADO,03/11/2026 15:44:00,03/11/2026 15:44:03,0,Recibido 👍 el viernes 18 hs en la plaza de Cerrillos,3EB075C74F9AD7F851B2
+12,2,Primo Nacho,+5493870002222,ENVIADO,03/11/2026 15:45:00,03/11/2026 15:45:01,0,"Ya entró la plata, sacala hoy",3EB0334386BA97A45CC4
+13,2,Primo Nacho,+5493870002222,RECIBIDO,03/11/2026 16:10:00,03/11/2026 16:10:03,0,"Listo, retirado. Borrá la publicación",3EB00FCCAD6E31F071C0
+14,3,Mamá,+5493870003333,RECIBIDO,04/11/2026 12:00:00,04/11/2026 12:00:03,0,Venís a almorzar el domingo?,3EB0F126737EC400554A
+15,3,Mamá,+5493870003333,ENVIADO,04/11/2026 12:30:00,04/11/2026 12:30:01,0,"Sí ma, llevo el postre",3EB0EAC5BAEA74A13693
+8,1,Carla Compradora,+5493870001111,RECIBIDO,06/11/2026 18:40:00,06/11/2026 18:40:01,0,"Estoy en la plaza hace 40 minutos, dónde estás?",3EB076E0C10F1A7E3D8F
+9,1,Carla Compradora,+5493870001111,RECIBIDO,06/11/2026 19:30:00,06/11/2026 19:30:02,0,Martín respondeme por favor,3EB0D9FB07A4119E6438

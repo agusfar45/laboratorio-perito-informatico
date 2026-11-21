@@ -1,0 +1,11 @@
+[OK]        data/data/com.whatsapp/databases/msgstore.db
+[OK]        data/data/com.whatsapp/databases/wa.db
+[OK]        sdcard/DCIM/Camera/IMG_20261101_102233.jpg
+[OK]        sdcard/DCIM/Camera/IMG_20261104_130010.jpg
+[ALTERADO]  sdcard/DCIM/Camera/IMG_20261106_181502.jpg
+            esperado 2cea1522889fea9429c8597b80d9a3c09ae338c8653ae446117f94e2adbc3500
+            actual   561b40a15d01d491492a01fd30317542d3f048c5b56c1c2288756cf35c2015a5
+[OK]        sdcard/Pictures/Screenshots/Screenshot_20261103_153112_WhatsApp.jpg
+[OK]        system/build.prop
+
+Resumen: 6 OK, 1 alterados, 0 faltantes, 0 nuevos

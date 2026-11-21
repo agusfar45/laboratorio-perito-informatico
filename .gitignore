@@ -1,0 +1,7 @@
+# copias de trabajo y salidas al correr los scripts localmente
+trabajo/
+scripts/salida_wa/
+scripts/recuperados/
+scripts/*.csv
+__pycache__/
+*.pyc
